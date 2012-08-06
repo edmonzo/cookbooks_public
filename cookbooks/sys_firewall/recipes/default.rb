@@ -12,7 +12,6 @@ if node[:sys_firewall][:enabled] == "enabled"
   sys_firewall "22" # SSH
   sys_firewall "80" # HTTP
   sys_firewall "443" # HTTPS
-  sys_firewall "3306" # MySQL
 else
   service "iptables" do
     supports :status => true
